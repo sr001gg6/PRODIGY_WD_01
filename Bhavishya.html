@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ProDigy Infotech | Task 01</title>
+  <style>
+    /* ====== Global Styles ====== */
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* ====== Navigation Bar ====== */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background-color: transparent;
+      transition: 0.4s ease;
+      z-index: 1000;
+    }
+
+    nav.scrolled {
+      background-color: #111;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+    }
+
+    ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    ul li a:hover {
+      color: #00bfff;
+      text-shadow: 0 0 10px #00bfff;
+    }
+
+    /* ====== Section Styles ====== */
+    section {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      color: white;
+      text-align: center;
+    }
+
+    #home {
+      background: linear-gradient(120deg, #1e3c72, #2a5298);
+    }
+
+    #about {
+      background: linear-gradient(120deg, #000428, #004e92);
+    }
+
+    #projects {
+      background: linear-gradient(120deg, #11998e, #38ef7d);
+    }
+
+    #contact {
+      background: linear-gradient(120deg, #8e2de2, #4a00e0);
+    }
+
+    /* ====== Responsive ====== */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+      }
+      ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <div class="logo">ProDigy Infotech</div>
+    <ul>
+      <li><a href="#home">01</a></li>
+      <li><a href="#about">Comillas Negras</a></li>
+      <li><a href="#projects">Task-01</a></li>
+      <li><a href="#contact">Responsive Landing Page</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">Welcome to ProDigy Infotech</section>
+  <section id="about">Comillas Negras Section</section>
+  <section id="projects">Task-01 Project</section>
+  <section id="contact">Responsive Landing Page</section>
+
+  <script>
+    // ====== Change Nav Color on Scroll ======
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+</body>
+</html>
